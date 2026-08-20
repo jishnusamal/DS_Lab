@@ -1,0 +1,6 @@
+*.c.save
+*.exe
+*.o
+*.out
+*.so
+.DS_Store

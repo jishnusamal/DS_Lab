@@ -4,7 +4,7 @@ int *bubbleSort(int nums[], int len);
 int *selectionSort(int nums[], int len);
 int *insertionSort(int nums[], int len);
 
-int main(void) {
+int main() {
     int nums[] = {15, 46, 25, 11, 91, 97};
     int len = sizeof(nums) / sizeof(nums[0]);
     int sort;
@@ -68,5 +68,19 @@ int *selectionSort(int nums[], int len) {
 }
 
 int *insertionSort(int nums[], int len) {
+    for (int i = 1; i < len; i++) {
+        int key = nums[i];
+        int j = i - 1;
 
+        // Shift larger elements one position to the right
+        while (j >= 0 && nums[j] > key) {
+            nums[j + 1] = nums[j];
+            j--;
+        }
+
+        // Insert key into its correct position
+        nums[j + 1] = key;
+    }
+
+    return nums;
 }

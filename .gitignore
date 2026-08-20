@@ -1,6 +1,14 @@
-*.c.save
+# Compiled executables
+main
 *.exe
+
+# Object files
 *.o
-*.out
-*.so
+
+# macOS debug symbols
+*.dSYM/
+
+# Backup files
+*.save
+
 .DS_Store
